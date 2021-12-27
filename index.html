@@ -21,6 +21,14 @@
     /*--------------------------------------------------------------
     # 雪花
     --------------------------------------------------------------*/
+    #banner-div::before{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(to top, #fff, transparent);
+    }
 /*    .particles{
         width: 100%;
         height: 100vh;
@@ -63,7 +71,7 @@
     </style>
 </head>
 <body
-class="tracking-widest">
+class="tracking-widest antialiased">
 <div 
 class="wrap">
     <div 
@@ -134,25 +142,34 @@ class="wrap">
     </div>
     <!-- Banner -->
     <section 
-    class="h-screen w-full relative overflow-hidden flex justify-center items-end bg-cover bg-right md:bg-top bg-left" 
+    id="banner"  
+    class="h-screen relative overflow-hidden flex justify-center items-end bg-cover bg-right md:bg-top bg-left" 
     style="background-image: url(https://www.jojowedding.com.tw/files/%E6%8B%8D%E6%94%9D%E6%99%AF%E9%BB%9E/%E6%BE%B3%E9%96%80%E6%97%85%E6%8B%8D/5.jpg?1577437395);">
         <div
         class="text-center text-white mb-40">
             <h1
             class="text-5xl font-black text-white" style="text-shadow: 1px 1px 3px #666;">先生 & 小姐</h1>
             <h2
+            class="text-md font-black my-3 text-white" style="text-shadow: 1px 1px 3px #666;">施林婚宴 邀請您！</h2>
+            <h2
             class="text-md font-black my-10 text-white" style="text-shadow: 1px 1px 3px #666;">May 8, 2022, 12:00 PM | Changhua City</h2>
-            <a class="border border-2 border-white rounded py-2 px-6 text-white font-black text-xl hover:bg-red-100 bg-red-300" 
-            href="javascript:;">邀請函！</a>
+            <div class="flex justify-center items-center">
+                <a class="border border-2 border-white rounded py-2 px-6 text-white font-black text-xl hover:bg-red-100 bg-red-300 flex flex-row items-center justify-center" 
+                href="javascript:;">邀請函
+                     <svg viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes slide-17{to{transform:translateX(2px)}}</style><path fill="#fff" d="M11.039 17.692a.857.857 0 01-1.317-1.098L13.55 12 9.722 7.406a.857.857 0 111.317-1.098l4.276 5.132a.848.848 0 01.208.56.854.854 0 01-.208.56l-4.276 5.132z" style="animation:slide-17 1s infinite alternate both cubic-bezier(1,-.01,0,.98)"/></svg>
+                </a>
+            </div>
 <!--             <div
             class="absolute right-40 top-10 text-gray-900 flex-col" style="direction:ltr; writing-mode:tb-rl;">
-                <p class="text-2xl tracking-widest text-white font-black">彰化市延和里大埔路2巷126號</p>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="none"><style>@keyframes loader15{0%{transform:scale(.2);opacity:.8}80%{transform:scale(1.2);opacity:0}to{transform:scale(2.2);opacity:0}}</style><circle cx="12" cy="12" r="6" fill="#0A0A30" style="animation:loader15 1.5s cubic-bezier(.165,.84,.44,1) infinite both;transform-origin:center center"/><path fill="#265BFF" fill-rule="evenodd" d="M13.41 11.591a.5.5 0 010 .817l-1.73 1.222a.5.5 0 01-.788-.409v-2.442a.5.5 0 01.789-.409l1.729 1.222z" clip-rule="evenodd"/></svg>
             </div> -->
         </div>
 
     </section>
     <!-- 簡單介紹 -->
-    <section class="bg-white">
+    <section 
+    id="banner-div" 
+    class="bg-white">
         <div class="max-w-5xl px-6 py-16 mx-auto">
             <div class="items-center md:flex md:space-x-6">
                 <div class="md:w-1/2">
@@ -160,7 +177,7 @@ class="wrap">
                                 src="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2F%E6%88%AA%E5%9C%96%202021-12-27%20%E4%B8%8B%E5%8D%883.42.52.png?alt=media&token=966236dd-be2a-4d87-a62f-68fe964772fe"">
                 </div>
     
-                <div class="mt-8 md:mt-0 md:w-1/2">
+                <div class="mt-14 md:mt-0 md:w-1/2">
                     <div class="flex items-center justify-center">
                         <div class="max-w-md">
                             <img class="object-cover object-center w-full rounded-md shadow" style="height: 500px;"
@@ -173,8 +190,8 @@ class="wrap">
     </section>
     <!-- 簡單介紹 -->
     <section class="bg-white">
-        <div class="max-w-5xl px-6 py-16 mx-auto">
-            <div class="items-center md:flex md:space-x-6">
+        <div class="max-w-5xl px-6 py-0 md:py-8 mx-auto">
+            <div class="items-center md:flex">
                 <div class="md:w-1/2">
                     <div class="flex items-center justify-center">
                         <div class="max-w-md">
@@ -194,14 +211,14 @@ class="wrap">
         </div>
     </section>
     <!-- 簡單介紹 -->
-    <section class="">
+<!--     <section class="">
         <div class="max-w-5xl px-6 py-16 mx-auto">
             <div class="items-center md:flex md:space-x-6">
                 <iframe width="100%" height="600px" src="https://www.surveycake.com/s/97ZoO"
                 class="" allowTransparency="true" frameborder="0"></iframe>
             </div>
         </div>
-    </section>
+    </section> -->
     </div>
 
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
