@@ -330,7 +330,7 @@ class="wrap">
             </div>
     </section>
 
-<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -367,17 +367,13 @@ class="wrap">
       distance: '60px',
       duration: 2500,
       delay: 400,
-      // reset: true
     })
 
-    sr.reveal(`.footer`)
-    // sr.reveal(`.b-txt-01, .b-txt-02`, {delay: 500})
     sr.reveal(`.b-h1, .b-h2, .b-h3, .b-h4`,{interval: 200})
     sr.reveal(`.b-h3, .b-h4`,{origin: 'bottom'})
     sr.reveal(`.b-l1`,{origin: 'left'})  
     sr.reveal(`.b-r1`,{origin: 'right'})   
 
- 
 </script>
 </body>
 </html>
