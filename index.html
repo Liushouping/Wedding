@@ -139,21 +139,19 @@
     }
     </style>
 </head>
-<body
+<body 
+x-data="{ showModal : false }" 
 class="tracking-widest antialiased">
 <!-- 加載畫面 -->
-<div class="loader_bg w-screen h-screen fixed z-50 flex justify-center items-center opacity-90 bg-gray-900">
-    <div class="absolute">
+<div class="loader_bg w-screen h-screen z-50 flex justify-center items-center opacity-90 bg-gray-900 absolute">
         <div class="spinner">
           <div class="bounce1"></div>
           <div class="bounce2"></div>
           <div class="bounce3"></div>
         </div>
-    </div>
 </div>
 <div 
-class="wrap" 
-x-data="{ showModal : false }">
+class="wrap">
     <div 
     class="antialiased">
       <div 
@@ -226,22 +224,11 @@ x-data="{ showModal : false }">
          </nav>
         </div>
       </div>
-        <!-- Modal Background -->
-        <div x-show="showModal" class="fixed text-gray-500 flex items-center justify-center overflow-auto z-50 bg-gray-900 bg-opacity-80 left-0 right-0 top-0 bottom-0" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <!-- Modal -->
-            <div x-show="showModal" class="bg-white rounded-xl shadow-2xl p-2 w-full md:w-1/2 mx-4" @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform" x-transition:enter-start="opacity-0 scale-90 translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease duration-100 transform" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-90 translate-y-1">
-                <!-- Title -->
-                <iframe width="100%" height="370px" src="https://www.surveycake.com/s/97ZoO" allowTransparency="true" frameborder="0"></iframe>
-                <!-- Buttons -->
-                <div class="text-right space-x-1 mt-1">
-                    <button @click="showModal = !showModal" class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">關閉</button>
-                </div>
-            </div>
+
         </div>
     </div>
     <!-- Banner -->
     <section 
-    x-data="{ showModal : false }" 
     id="banner-div" 
     class="h-screen relative overflow-hidden flex justify-center items-end bg-cover bg-right md:bg-top bg-center" 
     style="background-image: url(https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2F%E6%88%AA%E5%9C%96%202021-12-27%20%E4%B8%8B%E5%8D%883.42.34.png?alt=media&token=6dd46882-e05b-41db-8717-95d473a3d942);">
@@ -289,18 +276,7 @@ x-data="{ showModal : false }">
                 style="text-shadow: 1px 1px 3px #555;  letter-spacing: 0.2em;">一起見證我們人生最重要的時刻，</h3>
             </div>
         </div>
-        <!-- Modal Background -->
-        <div x-show="showModal" class="fixed text-gray-500 flex items-center justify-center overflow-auto z-50 bg-gray-900 bg-opacity-80 left-0 right-0 top-0 bottom-0" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <!-- Modal -->
-            <div x-show="showModal" class="bg-white rounded-xl shadow-2xl p-2 w-full md:w-1/2 mx-4" @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform" x-transition:enter-start="opacity-0 scale-90 translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease duration-100 transform" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-90 translate-y-1">
-                <!-- Title -->
-                <iframe width="100%" height="370px" src="https://www.surveycake.com/s/97ZoO" allowTransparency="true" frameborder="0"></iframe>
-                <!-- Buttons -->
-                <div class="text-right space-x-1 mt-1">
-                    <button @click="showModal = !showModal" class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">關閉</button>
-                </div>
-            </div>
-        </div>
+        <!-- Bubbles -->
         <div class="bubbles opacity-40">
             <img src="./image/bubble.png">
             <img src="./image/bubble.png">
@@ -310,71 +286,45 @@ x-data="{ showModal : false }">
             <img src="./image/bubble.png">
             <img src="./image/bubble.png">
         </div>
-    </section>
-    <!-- 簡單介紹 -->
-<!--     <section 
-    class="bg-white">
+
+        <!-- Modal Background -->
         <div 
-        class="max-w-5xl px-6 py-0 md:py-8 mx-auto">
+        x-show="showModal" 
+        class="fixed text-gray-500 flex items-center justify-center overflow-auto z-20 bg-gray-900 bg-opacity-80 left-0 right-0 top-0 bottom-0" 
+        x-transition:enter="transition ease duration-300" 
+        x-transition:enter-start="opacity-0" 
+        x-transition:enter-end="opacity-100" 
+        x-transition:leave="transition ease duration-300" 
+        x-transition:leave-start="opacity-100" 
+        x-transition:leave-end="opacity-0">
+
             <div 
-            class="items-center md:flex">
+            x-show="showModal" 
+            class="bg-white rounded-xl shadow-2xl p-2 w-full md:w-1/2 mx-4" 
+            @click.away="showModal = false" 
+            x-transition:enter="transition ease duration-100 transform" 
+            x-transition:enter-start="opacity-0 scale-90 translate-y-1" 
+            x-transition:enter-end="opacity-100 scale-100 translate-y-0" 
+            x-transition:leave="transition ease duration-100 transform" 
+            x-transition:leave-start="opacity-100 scale-100 translate-y-0" 
+            x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+
+                <iframe 
+                width="100%" 
+                height="370px" 
+                src="https://www.surveycake.com/s/97ZoO" 
+                allowTransparency="true" 
+                frameborder="0"></iframe>
+
                 <div 
-                class="md:w-1/2">
-                    <div 
-                    class="flex items-center justify-center">
-                        <div 
-                        class="max-w-md">
-                            <img 
-                            class="object-cover object-center w-full rounded-md shadow" 
-                            style="height: 500px;"
-                            src="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2F%E6%88%AA%E5%9C%96%202021-12-27%20%E4%B8%8B%E5%8D%886.53.50.png?alt=media&token=d97ee9fb-6754-4cd2-82a2-58c009e1ceb7">
-                        </div>
-                    </div>
+                class="text-right space-x-1 mt-1">
+                    <button 
+                    @click="showModal = !showModal" 
+                    class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">關閉</button>
                 </div>
-    
-                <div 
-                class="mt-8 md:mt-0 mb-8 md:w-1/2">
-                    <h3 
-                    class="text-2xl font-semibold text-gray-800">Lorem ipsum dolor sit <br> amet, consectetur</h3>
-                    <p 
-                    class="max-w-md mt-4 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+
             </div>
-        </div>
-    </section> -->
-    <!-- Footer -->
-<!--     <div class=" bg-gray-900">
-        <div class="max-w-2xl mx-auto text-white py-10">
-            <div class=" flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-                <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; 誠摯邀請您, 2022.05.08 </p>
-                <div class="order-1 md:order-2">
-                    <span class="px-2">
-                        <a 
-                        class="hover:text-yellow-300" 
-                        href="">
-                            加入行事曆
-                        </a>
-                    </span>
-                    <span class="px-2 border-l">
-                        <a 
-                        class="hover:text-yellow-300" 
-                        href="">
-                            婚宴地圖
-                        </a>
-                    </span>
-                    <span class="px-2 border-l">
-                        <a 
-                        class="hover:text-yellow-300" 
-                        href="">
-                            婚宴邀請函
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    </section>
 
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
