@@ -190,7 +190,7 @@ class="wrap">
          </div>
          <nav 
          :class="{'flex': open, 'hidden': !open}" 
-         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-center md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white">
+         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white text-4xl md:text-xl">
            <button 
            class="mobile-menu-button rounded-lg md:hidden focus:outline-none focus:shadow-outline z-30 absolute top-7 right-7" 
            @click="open = !open">
@@ -210,17 +210,17 @@ class="wrap">
             </svg>
            </button>
            <a 
-           class="px-4 py-3 mt-2 text-md font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
+           class="px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
            href="https://calndr.link/e/ujLDlWpQbU?s=apple" style="text-shadow: 1px 1px 3px #555;">
                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes notify{0%,to{transform:rotate(0deg);transform-origin:top center}10%,90%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-6deg)}30%,50%,70%{transform:rotate(6deg)}80%{transform:rotate(-2deg)}}</style><g style="animation:notify 1s cubic-bezier(.455,.03,.515,.955) both infinite" stroke-width="1.5"><path stroke="#fff" d="M12.29 3.398a5 5 0 00-5 5v2c0 .758-.441 1.505-1.005 2.012a3 3 0 002.005 5.232h8a3 3 0 002.006-5.232c-.564-.507-1.005-1.254-1.005-2.012v-2a5 5 0 00-5-5z"/><path stroke="#fff" stroke-linecap="round" d="M14.68 20.312l-.042.01a9.713 9.713 0 01-4.67-.01"/></g></svg>
            行事曆</a>
            <a 
-           class="px-4 py-3 mt-2 text-md font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
+           class="px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
            href="https://goo.gl/maps/BU4xhV5G2dSbqsXq8" style="text-shadow: 1px 1px 3px #555;"> 
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes slide-right{0%{transform:translateY(0)}to{transform:translateY(-2px)}}</style><g style="animation:slide-right 1s cubic-bezier(.75,.02,.2,1.06) infinite alternate both" stroke-width="1.5"><path stroke="#fff" d="M17 10.193c0 2.867-4.5 8.307-5 8.307s-5-5.44-5-8.307C7 7.325 9.239 5 12 5s5 2.325 5 5.193z"/><circle cx="12" cy="10" r="2" stroke="#fff"/></g></svg>婚宴地點
            </a>
            <button 
-           class="px-4 py-3 mt-2 text-md font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
+           class="px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex" 
            style="text-shadow: 1px 1px 3px #555;" 
            @click="showModal = !showModal"> 
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes pulsate{0%,to{transform:scale(1)}50%{transform:scale(.9)}}</style><g style="animation:pulsate .5s ease-in-out infinite both;transform-origin:center center" stroke-width="1.5"><path stroke="#fff" d="M11.515 6.269l.134.132a.5.5 0 00.702 0l.133-.132A4.44 4.44 0 0115.599 5c.578 0 1.15.112 1.684.33a4.41 4.41 0 011.429.939c.408.402.733.88.954 1.406a4.274 4.274 0 010 3.316 4.331 4.331 0 01-.954 1.405l-6.36 6.259a.5.5 0 01-.702 0l-6.36-6.259A4.298 4.298 0 014 9.333c0-1.15.464-2.252 1.29-3.064A4.439 4.439 0 018.401 5c1.168 0 2.288.456 3.114 1.269z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M15.5 7.5c.802.304 1.862 1.43 2 2"/></g></svg>邀請函
@@ -262,10 +262,10 @@ class="wrap">
                 class="mt-3"><svg viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes slide-20{to{transform:translateY(-2px)}}</style><path fill="#fff" d="M18.215 13.484a.857.857 0 11-1.098 1.317l-4.594-3.828L7.93 14.8a.857.857 0 11-1.097-1.317l5.131-4.276a.854.854 0 011.12 0l5.132 4.276z" style="animation:slide-20 1s infinite alternate both cubic-bezier(1,-.01,0,.98)"/></svg></span>
                 <p
                 class="text-white text-sm font-black"
-                style="text-shadow: 1px 1px 3px #555;">上方點擊填寫表單</p>
+                style="text-shadow: 1px 1px 3px #555;">上方點擊婚禮出席表</p>
             </div>
             <div
-            class="b-l1 absolute left-7 md:left-40 top-20 text-gray-900 flex-col font-black text-md md:text-xl" 
+            class="b-l1 absolute left-7 md:left-40 top-20 text-gray-900 flex-col font-black text-xl" 
             style="direction:ltr; writing-mode:tb-rl;">
                 <h3
                 class="text-white hidden md:flex" 
@@ -273,7 +273,7 @@ class="wrap">
                 </h3>
             </div>
             <div
-            class="b-r1 absolute right-7 md:right-40 top-20 text-gray-900 flex-col font-black text-md md:text-xl" 
+            class="b-r1 absolute right-7 md:right-40 top-20 text-gray-900 flex-col font-black text-xl" 
             style="direction:ltr; writing-mode:tb-rl;">
                 <h3
                 class="text-white hidden md:flex" 
