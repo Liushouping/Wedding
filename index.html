@@ -324,6 +324,7 @@ class="wrap overflow-hidden">
                 x-transition:leave-end="opacity-0 scale-90 translate-y-1">
 
                     <iframe 
+                    id="iframe" 
                     width="100%" 
                     height="370px" 
                     src="https://www.surveycake.com/s/97ZoO" 
@@ -333,13 +334,13 @@ class="wrap overflow-hidden">
                     <div 
                     class="text-right space-x-1 mt-1">
                         <button 
-                        @click="showModal = !showModal" 
+                        @click="showModal = !showModal;" 
                         class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">關閉</button>
                     </div>
 
             </div>
 
-            <audio id="audio"  src="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2Fmusic.mp3?alt=media&token=15a3fcd4-8bbf-4a69-bf81-3c0642d6c881" preload="auto"></audio>
+            <audio id="audio"  src="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2Fmusic.mp3?alt=media&token=15a3fcd4-8bbf-4a69-bf81-3c0642d6c881" autoplay loop></audio>
     </section>
 
 
