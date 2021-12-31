@@ -230,7 +230,7 @@ class="wrap overflow-hidden">
             <button 
            class="md:hidden px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex items-center justify-center" 
            style="text-shadow: 1px 1px 3px #555;" 
-           @click="showModal = !showModal"> 
+           @click="showModal = !showModal;play();"> 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>婚宴出席表
@@ -263,7 +263,7 @@ class="wrap overflow-hidden">
             class="b-h4 flex justify-center items-center flex-col">
                 <button
                 class="border border-2 border-white rounded py-1 px-4 text-white font-black text-md hover:bg-red-300 bg-rose-400 flex flex-row items-center justify-center" 
-                @click="showModal = !showModal">邀請函
+                @click="showModal = !showModal;play();">邀請函
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -338,7 +338,11 @@ class="wrap overflow-hidden">
                     </div>
 
             </div>
+
+            <audio id="audio"  src="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2Fmusic.mp3?alt=media&token=15a3fcd4-8bbf-4a69-bf81-3c0642d6c881" preload="auto"></audio>
     </section>
+
+
 
 <script src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
@@ -347,7 +351,11 @@ class="wrap overflow-hidden">
 
     setTimeout(function(){
         $('.loader_bg').fadeToggle();
-    },1200);
+    },300);
+
+    function play(){
+        document.getElementById('audio').play();
+    }
 
     document.addEventListener('alpine:init', () => {
         Alpine.data('topBtn', () => ({
