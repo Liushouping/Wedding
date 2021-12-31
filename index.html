@@ -334,7 +334,10 @@ class="wrap overflow-hidden">
                     <div 
                     class="text-right space-x-1 mt-1">
                         <button 
-                        @click="showModal = !showModal;" 
+                        @click="showModal = !showModal;pause();" 
+                        class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">確認</button>
+                        <button 
+                        @click="showModal = !showModal;pause();" 
                         class="px-4 py-2 text-sm bg-white rounded-xl border transition-colors duration-150 ease-linear border-gray-200 text-gray-500 focus:outline-none focus:ring-0 font-bold hover:bg-gray-50 focus:bg-indigo-50 focus:text-indigo">關閉</button>
                     </div>
 
@@ -356,6 +359,10 @@ class="wrap overflow-hidden">
 
     function play(){
         document.getElementById('audio').play();
+    }
+
+    function pause(){
+        document.getElementById('audio').pause();
     }
 
     document.addEventListener('alpine:init', () => {
