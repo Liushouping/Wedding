@@ -194,8 +194,15 @@ class="wrap overflow-hidden">
            </button>
          </div>
          <nav 
+         x-show="open" 
          :class="{'flex': open, 'hidden': !open}" 
-         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl">
+         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl" 
+         x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-50"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90">
            <button 
            class="mobile-menu-button rounded-lg md:hidden focus:outline-none focus:shadow-outline z-30 absolute top-7 right-7" 
            @click="open = !open">
