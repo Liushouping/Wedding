@@ -186,8 +186,10 @@ class="wrap overflow-hidden">
          </div>
          <nav 
          :class="{'flex': open, 'hidden': !open}" 
-         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-20 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl">
-            <div class="absolute inset-0">
+         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-50 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl">
+            <div 
+            :class="{'flex': open, 'hidden': !open}" 
+            class="absolute inset-0 z-20">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_4p4x21lt.json"  background="transparent"  speed="1"  style="width: 240px; height: 240px;"    autoplay></lottie-player>
             </div>
