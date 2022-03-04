@@ -179,6 +179,17 @@ class="wrap overflow-hidden">
                 class="text-white hidden md:flex mix-blend-overlay" 
                 style="text-shadow: 1px 1px 3px #555;  letter-spacing: 0.2em;">一起見證我們人生最重要的時刻，</h3>
             </div>
+            <div 
+            x-data="{ isVisible: true }" 
+            @click="isVisible = !isVisible;"
+            class="absolute bottom-10 right-10 cursor-pointer">
+                <svg @click="play();" x-show="isVisible" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                </svg>
+                <svg @click="pause();" x-show="!isVisible" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" />
+                </svg>
+            </div>
         </div>
 
         <!-- Bubbles -->
