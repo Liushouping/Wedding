@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <title>盈慶&沛穎 婚宴出席表</title>
-    <meta itemprop="image" content="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2F%E6%88%AA%E5%9C%96%202021-12-27%20%E4%B8%8B%E5%8D%883.42.34.png?alt=media&token=6dd46882-e05b-41db-8717-95d473a3d942">
+
+    <meta itemprop="image" content="./image/banner.jpegq">
     <meta property="og:title" content="盈慶&沛穎 - 婚宴出席表" >
-    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/upload-image-78764.appspot.com/o/images%2F%E6%88%AA%E5%9C%96%202021-12-27%20%E4%B8%8B%E5%8D%883.42.34.png?alt=media&token=6dd46882-e05b-41db-8717-95d473a3d942">
+    <meta property="og:image" content="./image/banner.jpeg">
     <meta property="og:description" content="盈慶&沛穎 調查婚宴出席表，誠摯邀請您見證我們人生最重要的時刻。" >
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;500;900&display=swap" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
@@ -19,7 +22,6 @@
 <body 
 x-data="{ showModal : false }" 
 class="tracking-widest antialiased">
-<!-- 加載畫面 -->
 <div class="loader_bg w-screen h-screen z-50 flex justify-center items-center opacity-90 bg-gray-900 absolute overflow-hidden">
     <div class="spinner">
         <div class="bounce1"></div>
@@ -226,8 +228,6 @@ class="wrap overflow-hidden">
 
     </section>
 
-
-
 <script src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -269,9 +269,13 @@ class="wrap overflow-hidden">
 
     const sr = ScrollReveal({
       origin: 'top',
-      distance: '120px',
+      distance: '80px',
       duration: 2500,
       delay: 400,
+      opacity: 0,
+      scale: 0.8,
+      rotate: { x: 0, y: 0, z: 10 },
+      easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
     })
 
     sr.reveal(`.b-h1, .b-h2, .b-h3, .b-h4`,{interval: 200})
