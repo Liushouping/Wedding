@@ -36,7 +36,7 @@ class="wrap overflow-hidden">
     <div 
     class="antialiased">
       <div 
-      class="absolute w-full text-white z-99">
+      class="absolute w-full text-white z-30">
         <div 
         x-data="{ open: false }" 
         class="flex flex-col max-w-7xl md:px-4 px-0 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -63,7 +63,7 @@ class="wrap overflow-hidden">
          </div>
          <nav 
          :class="{'flex': open, 'hidden': !open}" 
-         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-50 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl">
+         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row md:relative fixed w-screen h-full md:h-auto z-30 items-center justify-center md:bg-black md:bg-opacity-0 md:text-gray-600 bg-gray-800 text-white md:text-base text-3xl">
            <button 
            class="mobile-menu-button rounded-lg md:hidden focus:outline-none focus:shadow-outline z-30 absolute top-7 right-7" 
            @click="open = !open">
@@ -108,8 +108,7 @@ class="wrap overflow-hidden">
            <a 
            class="px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 md:flex hidden items-center justify-center nav-03 cursor-pointer" 
            style="text-shadow: 1px 1px 3px #555;" 
-           @click="showModal = !showModal;play()" 
-           target="_blank"> 
+           @click="showModal = !showModal;play()"> 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>婚宴出席表
@@ -117,7 +116,7 @@ class="wrap overflow-hidden">
             <a 
            class="md:hidden px-4 py-3 mt-2 font-black bg-transparent md:mt-0 md:ml-4 text-white hover:text-yellow-300 flex items-center justify-center cursor-pointer" 
            style="text-shadow: 1px 1px 3px #555;" 
-           @click="showModal = !showModal;play();"> 
+           @click="showModal = !showModal;play()"> 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-1 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>婚宴出席表
@@ -205,7 +204,7 @@ class="wrap overflow-hidden">
             <!-- Modal Background -->
             <div 
             x-show="showModal" 
-            class="fixed text-gray-500 flex items-center justify-center overflow-auto z-20 bg-gray-900 bg-opacity-100 left-0 right-0 top-0 bottom-0">
+            class="fixed text-gray-500 flex items-center justify-center overflow-auto z-50 bg-gray-900 bg-opacity-100 left-0 right-0 top-0 bottom-0 z-50">
 
                 <div 
                 x-show="showModal" 
